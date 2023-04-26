@@ -1,0 +1,245 @@
+/* ------- Debug ------- */
+/* * {
+    outline: 1px solid red;
+} */
+
+/* ------- General ------- */
+html {
+    font-family: 'Calibri', sans-serif;
+}
+
+.background {
+    background-image: url("../images/jpg/mathBg.jpeg");
+    background-color: rgba(3, 0, 0, 0.7); /* white color with 50% opacity */
+    background-blend-mode: overlay; /* blend the background color with the image */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.content__wrapper {
+    margin:50px;
+}
+.background__overlay {
+    margin:30px 0px;
+    padding: 20px;
+    display: block;
+    height: auto;  /* change later */
+    background-color: cornflowerblue;
+    border: 6px solid paleturquoise;
+}
+.background__overlay:hover {
+    box-shadow: 0px 0px 20px 2px paleturquoise;
+}
+
+/* ------- Header ------- */
+
+.header__banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header__menu {
+    cursor: pointer;
+    background-color: cornflowerblue;
+    border: 3px solid paleturquoise;
+    border-radius: 0.3rem;
+    margin: 10px 0;
+}
+
+.header__menu:hover {
+    box-shadow: 0px 0px 20px 3px paleturquoise;
+}
+
+.header__menu__icon {
+    width: 50%;
+    height: auto;
+    transition: transform 0.2s;
+}
+.menu--active {
+    transform: rotate(90deg);
+}
+
+.header__logo__title {
+    background-color: rgba(3, 0, 0, 0.2); /* white color with 50% opacity */
+    background-blend-mode: overlay; /* blend the background color with the image */
+    border: 6px solid #8E8E8E;
+    font-family: "chalkduster", sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    line-height: 4rem;
+    font-size: 1.5rem;
+    text-align: center;
+    color: whitesmoke;
+    padding: 0 20px;
+}
+
+.header__navbar {
+    border: 3px solid paleturquoise;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease-out;
+    position: absolute;
+    top:150px;
+    left:50px;
+    width:300px;
+    background-color: cornflowerblue;
+    /* animation: fadeIn 0.4s; */
+}
+
+.header__navbar--active {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.header__navbar__item {
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    color: black;
+    transition: box-shadow 0.2s ease;
+    cursor: pointer;
+    transition: background-color 0,3s ease;
+}
+.header__navbar__item:not(:last-child) {
+    border-bottom: 3px solid paleturquoise;
+}
+.header__navbar__item:hover {
+    font-size: 1.05rem;
+    background-color: rgb(64, 101, 169);
+    box-shadow: 0px 0px 20px 3px paleturquoise;
+}
+
+.header__navbar__item-icon {
+    width:10%;
+    height: auto;
+    padding-right: 15px;
+}
+
+/* ----------------- Homepage ------------- */
+
+.homepage {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 200px;
+    cursor: default;
+}
+.homepage__title {
+    font-family: 'Chalkduster', sans-serif;
+}
+
+.homepage__body__biopic {
+    padding: 30px 0;
+}
+.homepage__body__biopic img{
+    width:60%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: 3px solid grey;
+    transition: transform 0.5s ease;
+}
+.homepage__body__biopic img:hover {
+    transform: scale(1.01);
+}
+[class^="homepage__body"] div {
+    text-align: left;
+}
+
+.homepage__header__title,
+.homepage__body__title {
+    transform: scale(1);
+    /* transition: transform 0.2s ease; */
+}
+
+.homepage__header__title:hover,
+.homepage__body__title:hover {
+    transform: scale(1.05);
+}
+
+/* --------------DRY CLASSES---------------  */
+
+.br {
+    border-radius: 0.5rem;
+}
+
+
+/* --------------SHIMMER---------------  */
+.shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+
+.shimmer::before,
+.shimmer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;;
+    background: linear-gradient(45deg, transparent 50%, #696969 60%, silver 62%, #696969 64%, transparent 74%);
+    z-index: -1;
+    animation-name: shimmer;
+    animation-duration: 3s;
+    /* decrease time increase position percent, increase time decrease position percent; */
+    animation-iteration-count: infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-75%);
+    }
+    20% {
+        transform: translateX(65%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+
+
+
+/*
+"media-queries": {
+    "full": {
+        "size": 1334,
+        "type": "min-width"
+    },
+    "desktop": {
+        "size": 1333,
+        "type": "max-width"
+    },
+    "desktop-extra-wide": {
+        "size": 1920,
+        "type": "min-width"
+    },
+    "desktop-wide": {
+        "size": 1920,
+        "type": "max-width"
+    },
+    "nav": {
+        "size": 1200,
+        "type": "max-width"
+    },
+    "convertable": {
+        "size": 1100,
+        "type": "max-width"
+    },
+    "tablet": {
+        "size": 999,
+        "type": "max-width"
+    },
+    "smaller": {
+        "size": 700,
+        "type": "max-width"
+    },
+    "mobile": {
+        "size": 550,
+        "type": "max-width"
+    },
+    "tiny": {
+        "size": 380,
+        "type": "max-width"
+    }
+}, */
