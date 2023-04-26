@@ -3,3 +3,7 @@ Django==4.2
 django-sass-processor==1.2.2
 sqlparse==0.4.3
 tzdata==2023.3
+
+
+
+# to pull in required packages: pip3 install -r requirements.txt
