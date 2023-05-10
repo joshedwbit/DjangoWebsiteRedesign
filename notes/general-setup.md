@@ -64,3 +64,23 @@ python manage.py createsuperuser
 can then use these credentials to login to admin portal
 
 how to setup a user login system on my django project, explain each step in detail
+
+
+
+4.
+database
+
+python manage.py makemigrations
+python manage.py migrate
+
+once model is created inside the app models.py, will need to register the model in the app admin.py;
+from .models import [tablename]
+
+admin.site.register([tablename])
+
+can populate via the admin portal
+
+to display the model in a view, in views.py; from .models import [tablename]
+inject into view
+
+can use |safe filter to print html directly

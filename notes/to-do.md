@@ -1,10 +1,13 @@
 
 # steps
-templates + css - done
-Sass - done
+breakup stylesheets correctly (use SASS)
+responsive
 extends
 admin
 mysql
+
+templates + css - done
+Sass - done
 
 
 # workspace
