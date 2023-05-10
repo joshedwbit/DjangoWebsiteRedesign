@@ -30,3 +30,6 @@ env/
 
 # Ignore local development settings
 local_settings.py
+
+#specific files
+private.md

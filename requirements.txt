@@ -7,4 +7,4 @@ tzdata==2023.3
 
 
 # to pull in required packages: pip3 install -r requirements.txt
-# to run in mac fish shell: python3 manage.py runserver
+
