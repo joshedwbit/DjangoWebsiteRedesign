@@ -1,14 +1,13 @@
 
 # steps
+extends
 breakup stylesheets correctly (use SASS)
 responsive
-extends
-admin
-mysql
 
 templates + css - done
 Sass - done
-
+admin - done
+mysql - done
 
 # workspace
 django project vscode
