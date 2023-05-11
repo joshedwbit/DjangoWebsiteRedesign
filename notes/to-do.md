@@ -11,7 +11,7 @@ Sass - done
 
 
 # workspace
-vscode blog project (downloads)
-new django project vscode
+django project vscode
+github desktop
 this notepad
 google (tabs saved) - gpt, localserver
