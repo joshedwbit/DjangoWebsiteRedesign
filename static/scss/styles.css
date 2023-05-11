@@ -176,6 +176,14 @@ html {
   100% {
     transform: translateX(100%); } }
 
+.footer {
+  border: 3px solid paleturquoise;
+  background-color: cornflowerblue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 20px; }
+
 /*
 "media-queries": {
     "full": {

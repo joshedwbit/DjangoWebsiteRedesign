@@ -198,7 +198,14 @@ html {
     }
 }
 
-
+.footer {
+    border: 3px solid paleturquoise;
+    background-color: cornflowerblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px;
+}
 
 
 /*

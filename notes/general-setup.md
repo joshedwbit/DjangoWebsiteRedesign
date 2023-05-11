@@ -16,6 +16,9 @@ CSS/JS are held in a static directory - referenced at top of any template (html 
 whenver a model is created it must be added to admin.py
 
 
+*** need to restart local environment if making config changes ***
+
+
 
 similarities to D3R
 apps = MVC build - can be used in multiple projects - therefore easier to replicate in Django
@@ -84,3 +87,9 @@ to display the model in a view, in views.py; from .models import [tablename]
 inject into view
 
 can use |safe filter to print html directly
+
+
+5.
+extends templates
+templatetags directory = hold custom template tags for that app.
+created at same level as app's views.py

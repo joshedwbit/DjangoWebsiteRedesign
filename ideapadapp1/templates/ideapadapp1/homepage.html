@@ -1,77 +1,42 @@
-{% load sass_tags %}
+{% extends './base.html' %}
+
 {% load static %}
-{% sass_src 'scss/styles.scss' %}
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Website Redesign D2</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="{% sass_src 'scss/styles.scss' %}">
-        <script type="text/javascript" src="{% sass_src 'javascript/d2-script.js' %}"></script>
-    </head>
-    <body class="background">
-        <div class="content__wrapper">
-            <header class="header__banner">
-                <button class="header__menu">
-                    <img class="header__menu__icon" src="{% static 'images/svg/menu.svg' %}" alt="menu">
-                </button>
-                <div class="header__logo">
-                    <div class="header__logo__title br shimmer">
-                        Joshua Edwards Tutoring
-                    </div>
-                </div>
-                <nav class="header__navbar br">
-                    <a class="header__navbar__item"><img class="header__navbar__item-icon" src="{% static 'images/svg/home.svg' %}" alt="Home"> Home</a>
-                    <a class="header__navbar__item"><img class="header__navbar__item-icon" src="{% static 'images/svg/send.svg' %}" alt="Contact"> Contact</a>
-                    <a class="header__navbar__item"><img class="header__navbar__item-icon" src="{% static 'images/svg/notepad.svg' %}" alt="Reviews"> Reviews</a>
-                    <a class="header__navbar__item"><img class="header__navbar__item-icon" src="{% static 'images/svg/speaking-head.svg' %}" alt="Leave a review">Leave a review</a>
-                    <a class="header__navbar__item"><img class="header__navbar__item-icon" src="{% static 'images/svg/infinity.svg' %}" alt="Recent news"> Recent news</a>
-                </nav>
-            </header>
-            <main class="background__overlay br">
-                <div class="homepage">
-                    {% for model in homepage_model %}
-                    <h2 class="homepage__title">{{ model.Title }}</h2>
-                    <section class="homepage__header__about-me">
-                        <div>
-                            <h3 class="homepage__header__title">About me</h3>
-                            <div>
-                                {{ model.AboutMe|safe }}
-                            </div>
-                        </div>
-                    </section>
-                    <section class="homepage__header__aim">
-                        <h3 class="homepage__header__title">Aim</h3>
-                        <div>
-                            {{ model.Aim|safe }}
-                        </div>
-                    </section>
-                    <section class="homepage__body__biopic">
-                        <img src="{% static 'images/jpg/biopic.jpeg' %}" alt="profile picture" title="Joshua Edwards Tutoring Ltd" class="br">
-                    </section>
-                    <section class="homepage__body__background">
-                        <h3 class="homepage__body__title">Background</h3>
-                        <div>
-                            {{ model.Background|safe }}
-                        </div>
-                    </section>
-                    <section class="homepage__body__approach">
-                        <h3 class="homepage__body__title">Approach</h3>
-                        <div>
-                            {{ model.Approach|safe }}<br>If interested please <a href="{% url 'about' %}" >get in contact.</a>
-                        </div>
-                    </section>
-                    {% endfor %}
-                </div>
-                <footer>
 
-
-                </footer>
-            </main>
-        </div>
-        <script src="" async defer></script>
-    </body>
-</html>
+{% block content %}
+<main class="background__overlay br">
+    <div class="homepage">
+        {% for model in homepage_model %}
+        <h2 class="homepage__title">{{ model.Title }}</h2>
+        <section class="homepage__header__about-me">
+            <div>
+                <h3 class="homepage__header__title">About me</h3>
+                <div>
+                    {{ model.AboutMe|safe }}
+                </div>
+            </div>
+        </section>
+        <section class="homepage__header__aim">
+            <h3 class="homepage__header__title">Aim</h3>
+            <div>
+                {{ model.Aim|safe }}
+            </div>
+        </section>
+        <section class="homepage__body__biopic">
+            <img src="{% static 'images/jpg/biopic.jpeg' %}" alt="profile picture" title="Joshua Edwards Tutoring Ltd" class="br">
+        </section>
+        <section class="homepage__body__background">
+            <h3 class="homepage__body__title">Background</h3>
+            <div>
+                {{ model.Background|safe }}
+            </div>
+        </section>
+        <section class="homepage__body__approach">
+            <h3 class="homepage__body__title">Approach</h3>
+            <div>
+                {{ model.Approach|safe }}<br>If interested please <a href="{% url 'about' %}" >get in contact.</a>
+            </div>
+        </section>
+        {% endfor %}
+    </div>
+</main>
+{% endblock %}
