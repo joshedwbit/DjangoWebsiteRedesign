@@ -91,5 +91,3 @@ can use |safe filter to print html directly
 
 5.
 extends templates
-templatetags directory = hold custom template tags for that app.
-created at same level as app's views.py
