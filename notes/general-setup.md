@@ -16,6 +16,8 @@ CSS/JS are held in a static directory - referenced at top of any template (html 
 whenver a model is created it must be added to admin.py
 
 
+# to pull in required packages: pip3 install -r requirements.txt
+
 *** need to restart local environment if making config changes ***
 
 
@@ -91,3 +93,8 @@ can use |safe filter to print html directly
 
 5.
 extends templates
+
+6.
+pip install libsass
+python manage.py collectstatic
+pip freeze > requirements.txt

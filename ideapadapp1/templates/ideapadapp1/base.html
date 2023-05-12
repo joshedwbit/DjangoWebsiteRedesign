@@ -14,6 +14,7 @@
     </head>
     <body class="background">
         <div class="content__wrapper">
+            {% block header %}
             <header class="header__banner">
                 <button class="header__menu">
                     <img class="header__menu__icon" src="{% static 'images/svg/menu.svg' %}" alt="menu">
@@ -31,18 +32,32 @@
                     <a class="header__navbar__item"><img class="header__navbar__item-icon" src="{% static 'images/svg/infinity.svg' %}" alt="Recent news"> Recent news</a>
                 </nav>
             </header>
-            {% block content %}
             {% endblock %}
+
+            {% block content %}
+            <main>
+                {% block main %}
+                {% endblock %}
+            </main>
+            {% endblock %}
+
+            {% block footer %}
             <footer>
                 <div class="footer br">
                     <div class="footer__lhs">
-                        Copyright {{ current_year }} &#169;
+                        <div>
+                            Copyright {{ current_year }} &#169;
+                        </div>
                     </div>
                     <div class="footer__rhs">
-                        socials
+                        <div class="footer__rhs__container">
+                            <img class="footer__rhs__icon" src="{% static 'images/svg/footer/mail.svg' %}" alt="email">
+                            <img class="footer__rhs__icon" src="{% static 'images/svg/footer/whatsapp.svg' %}" alt="email">
+                        </div>
                     </div>
                 </div>
             </footer>
+            {% endblock %}
         </div>
         <script src="" async defer></script>
     </body>

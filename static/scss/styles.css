@@ -184,6 +184,16 @@ html {
   justify-content: space-between;
   padding: 0 20px; }
 
+.footer__lhs,
+.footer__rhs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.footer__rhs__icon {
+  width: 40px;
+  height: auto; }
+
 /*
 "media-queries": {
     "full": {

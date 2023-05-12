@@ -198,6 +198,7 @@ html {
     }
 }
 
+// -------------- footer --------------
 .footer {
     border: 3px solid paleturquoise;
     background-color: cornflowerblue;
@@ -206,6 +207,19 @@ html {
     justify-content: space-between;
     padding: 0 20px;
 }
+
+.footer__lhs,
+.footer__rhs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer__rhs__icon {
+    width: 40px;
+    height: auto;
+}
+
 
 
 /*
