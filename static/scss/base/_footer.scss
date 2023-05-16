@@ -1,0 +1,35 @@
+.footer {
+    border: 3px solid paleturquoise;
+    background-color: cornflowerblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px 20px;
+}
+
+.footer:hover {
+    box-shadow: 0px 0px 20px 2px paleturquoise;
+}
+
+.footer__lhs,
+.footer__rhs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.footer__rhs__container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.footer__rhs__icon--email {
+    width: 40px;
+    height: auto;
+}
+
+.footer__rhs__icon--whatsapp {
+    height: 35px;
+    width: auto;
+}
