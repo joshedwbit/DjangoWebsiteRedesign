@@ -11,20 +11,23 @@ html {
     background-blend-mode: overlay; /* blend the background color with the image */
     background-repeat: no-repeat;
     background-size: cover;
-}
-.background__wrapper {
-    margin:50px;
-    user-select: none;
-}
-.background__overlay {
-    margin:30px 0px;
-    padding: 20px;
-    display: block;
-    height: auto;  /* change later */
-    background-color: cornflowerblue;
-    border: 6px solid paleturquoise;
-}
 
-.background__overlay:hover {
-    box-shadow: 0px 0px 20px 2px paleturquoise;
+    .background__wrapper {
+        margin:50px;
+        user-select: none;
+
+        .background__overlay {
+            margin:30px 0px;
+            padding: 20px;
+            display: block;
+            height: auto;  /* change later */
+            background-color: cornflowerblue;
+            border: 6px solid paleturquoise;
+
+            &:hover {
+                box-shadow: 0px 0px 20px 2px paleturquoise;
+            }
+        }
+
+    }
 }
