@@ -20,7 +20,7 @@
                     <img class="header__menu__icon" src="{% static 'images/svg/menu.svg' %}" alt="menu">
                 </button>
                 <div class="header__logo">
-                    <div class="header__logo__title br shimmer">
+                    <div class="header__logo__title br header__logo__shimmer">
                         Joshua Edwards Tutoring
                     </div>
                 </div>
@@ -34,12 +34,14 @@
             </header>
             {% endblock %}
 
-            {% block content %}
-            <main>
-                {% block main %}
+            <div class="background__overlay br">
+                {% block content %}
+                <main>
+                    {% block main %}
+                    {% endblock %}
+                </main>
                 {% endblock %}
-            </main>
-            {% endblock %}
+            </div>
 
             {% block footer %}
             <footer>

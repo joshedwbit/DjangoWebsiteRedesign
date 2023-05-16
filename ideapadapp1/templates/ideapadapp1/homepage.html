@@ -3,7 +3,6 @@
 {% load static %}
 
 {% block content %}
-<div class="background__overlay br">
     <div class="homepage">
         {% for model in homepage_model %}
         <h2 class="homepage__title">{{ model.Title }}</h2>
@@ -38,5 +37,4 @@
         </section>
         {% endfor %}
     </div>
-</div>
 {% endblock %}
