@@ -1,3 +1,21 @@
+.br {
+  border-radius: 0.5rem; }
+
+.pageTitle {
+  animation: slide-up 1s ease;
+  text-align: center;
+  font-size: 2.5em;
+  margin: 20px;
+  font-weight: 700; }
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(50px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); } }
+
 html {
   font-family: 'Calibri', sans-serif; }
 
@@ -85,6 +103,7 @@ html {
   padding: 0 20px; }
 
 .header__navbar {
+  z-index: 100;
   border: 3px solid paleturquoise;
   visibility: hidden;
   opacity: 0;
@@ -175,7 +194,69 @@ html {
   .homepage .homepage__body__title:hover {
     transform: scale(1.05); }
 
-.br {
-  border-radius: 0.5rem; }
+.contact {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 20px; }
+  @media (max-width: 1000px) {
+    .contact {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 100px; } }
+  .contact .contact__item__wrapper {
+    position: relative;
+    width: 33.3%;
+    height: 500px; }
+    @media (max-width: 1000px) {
+      .contact .contact__item__wrapper {
+        width: 100%; } }
+    .contact .contact__item__wrapper:hover .contact__item__text {
+      opacity: 1; }
+  .contact .contact__item--linkedin {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("/static/images/jpg/linkedinLogo.jpg"); }
+  .contact .contact__item--email {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("/static/images/jpg/emailLogo.jpg"); }
+  .contact .contact__item--whatsapp {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("/static/images/jpg/whatsappLogo.jpg"); }
+  .contact .contact__item--linkedin::before,
+  .contact .contact__item--email::before,
+  .contact .contact__item--whatsapp::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Adjust the opacity as desired */
+    opacity: 0;
+    transition: opacity 0.3s; }
+  .contact .contact__item--linkedin:hover::before,
+  .contact .contact__item--email:hover::before,
+  .contact .contact__item--whatsapp:hover::before {
+    opacity: 1; }
+  .contact .contact__item__text {
+    opacity: 0;
+    color: #54dd84;
+    transition: opacity 1s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
 
 /*# sourceMappingURL=styles.css.map */

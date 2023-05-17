@@ -21,11 +21,11 @@ html {
             padding: 20px;
             display: block;
             height: auto;  /* change later */
-            background-color: cornflowerblue;
-            border: 6px solid paleturquoise;
+            background-color: $cornblue;
+            border: 6px solid $turquoise;
 
             &:hover {
-                box-shadow: 0px 0px 20px 2px paleturquoise;
+                box-shadow: 0px 0px 20px 2px $turquoise;
             }
         }
 

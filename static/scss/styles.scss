@@ -1,12 +1,12 @@
 @import 'partials/variables';
 @import 'partials/mixins';
+@import 'partials/global-classes';
 
 @import 'base/base';
 @import 'base/footer';
 @import 'base/header';
 
 @import 'components/homepage';
+@import 'components/aboutpage';
 
-
-@import 'partials/global-classes';
 
