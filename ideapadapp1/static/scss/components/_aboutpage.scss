@@ -1,12 +1,15 @@
 .contact {
     display: flex;
     flex-direction: row;
-    padding: 10px 20px;
+    margin: 10px 20px;
+    border-radius: 0.5rem;
+    border: 6px solid $turquoise;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
     @include breakpoint($nav) {
         flex-direction: column;
         align-items: center;
-        padding: 10px 100px;
+        margin: 10px 10px;
     }
 
     .contact__item__wrapper {
@@ -61,12 +64,23 @@
 
     .contact__item__text {
         opacity: 0;
-        color: $turqgreen;
-        transition: opacity 1s ease;
+        text-align: center;
+        color: $whitesmoke;
+        font-size: 1.1rem;
+        font-weight: 600;
+        // letter-spacing: 0.05em;
+        transition: opacity 0.8s ease;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        background-color: rgba(175,238,238,0.7);
+        padding: 20px;
+        @include br(0.1rem);
+
+        a {
+            color: rgba(41, 52, 61, 0.829);
+        }
     }
 
 }
