@@ -20,4 +20,5 @@ from django.urls import include, path
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('ideapadapp1.urls')),
+    path('recent-news/', include('twitterapi.urls')),
 ]
