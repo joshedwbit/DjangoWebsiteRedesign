@@ -28,7 +28,7 @@
                     <a href="{% url 'homepage' %}" class="header__navbar__item"><img class="header__navbar__item-icon" src="{% static 'images/svg/home.svg' %}" alt="Home"> Home</a>
                     <a href="{% url 'about' %}" class="header__navbar__item"><img class="header__navbar__item-icon" src="{% static 'images/svg/send.svg' %}" alt="Contact"> Contact</a>
                     <a class="header__navbar__item"><img class="header__navbar__item-icon" src="{% static 'images/svg/notepad.svg' %}" alt="Reviews"> Reviews</a>
-                    <a class="header__navbar__item"><img class="header__navbar__item-icon" src="{% static 'images/svg/speaking-head.svg' %}" alt="Leave a review">Leave a review</a>
+                    <a href="{% url 'leave-a-review' %}" class="header__navbar__item"><img class="header__navbar__item-icon" src="{% static 'images/svg/speaking-head.svg' %}" alt="Leave a review">Leave a review</a>
                     <a href="{% url 'recent-news' %}" class="header__navbar__item"><img class="header__navbar__item-icon" src="{% static 'images/svg/infinity.svg' %}" alt="Recent news"> Recent news</a>
                 </nav>
             </header>

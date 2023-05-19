@@ -34,6 +34,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'ideapadapp1',
     'twitterapi',
+    'reviews',
     'sass_processor',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -122,6 +123,7 @@ USE_TZ = True
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'ideapadapp1/static'),
     os.path.join(BASE_DIR, 'twitterapi/static'),
+    os.path.join(BASE_DIR, 'reviews/static'),
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')

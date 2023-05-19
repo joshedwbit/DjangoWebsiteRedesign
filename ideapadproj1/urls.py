@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('ideapadapp1.urls')),
     path('recent-news/', include('twitterapi.urls')),
+    path('leave-a-review/', include('reviews.urls')),
 ]

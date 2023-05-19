@@ -103,10 +103,11 @@ pip freeze > requirements.txt
 7.
 create new app
 edit views
-edit urls
+create + edit urls
 create new templates folder with the right setup
 create new static folder with the right setup
 
 tweak main urls.py - add path
 tweak main settings.py - add to installed apps + staticfiles_dirs add stylesheet
 
+update styles.scss to pull in new styles (if necessary)
