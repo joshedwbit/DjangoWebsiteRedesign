@@ -2,6 +2,7 @@
 # steps
 breakup stylesheets correctly (use SASS)
 responsive
+Favicon
 callouts on home page for reviews i.e. similar to trustpilot popup
 
 footer: add svg + cleanup - done
