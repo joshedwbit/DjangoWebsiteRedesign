@@ -11,6 +11,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{% sass_src 'scss/styles.scss' %}">
         <script type="text/javascript" src="{% sass_src 'javascript/d2-script.js' %}"></script>
+        {% block scripts %}
+        {% endblock %}
     </head>
     <body class="background">
         <div class="background__wrapper">
@@ -61,7 +63,5 @@
             </footer>
             {% endblock %}
         </div>
-        {% block scripts %}
-        {% endblock %}
     </body>
 </html>

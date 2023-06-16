@@ -111,3 +111,7 @@ tweak main urls.py - add path
 tweak main settings.py - add to installed apps + staticfiles_dirs add stylesheet
 
 update styles.scss to pull in new styles (if necessary)
+
+8.
+If adding specific stylesheet/js to a view file, must include {% load sass_tags %}
+at the top of the file

@@ -1,6 +1,10 @@
 {% extends 'ideapadapp1/base.html' %}
-
+{% load sass_tags %}
 {% load static %}
+
+{% block scripts %}
+<script type="text/javascript" src="{% sass_src 'twitterapi/javascript/api-dropdown.js' %}"></script>
+{% endblock %}
 
 {% block content %}
 <div class="pageTitle">Recent news</div>

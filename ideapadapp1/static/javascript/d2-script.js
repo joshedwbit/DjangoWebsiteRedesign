@@ -1,5 +1,3 @@
-console.log('d2')
-
 document.addEventListener("DOMContentLoaded", function() {
   var menuToggle = document.querySelector('.header__menu');
   var navbar = document.querySelector('.header__navbar');
