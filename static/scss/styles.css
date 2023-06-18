@@ -15,6 +15,21 @@
     opacity: 1;
     transform: translateY(0px); } }
 
+.loading-spinner {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 4px solid black;
+  border-top: 4px solid cornflowerblue;
+  animation: spin 1s linear infinite;
+  margin: 0 auto; }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
 html {
   font-family: 'Calibri', sans-serif; }
 
@@ -125,7 +140,7 @@ html {
     transition: background-color 0,3s ease; }
     .header__navbar .header__navbar__item:hover {
       font-size: 1.05rem;
-      background-color: #4065a9;
+      background-color: #4CA8C7;
       box-shadow: 0px 0px 20px 3px paleturquoise; }
     .header__navbar .header__navbar__item .header__navbar__item-icon {
       width: 10%;
@@ -263,7 +278,7 @@ html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(175, 238, 238, 0.7);
+    background-color: #4CA8C7;
     padding: 20px;
     border-radius: 0.1rem; }
     .contact .contact__item__text a {
@@ -285,11 +300,11 @@ html {
     margin-bottom: 10px;
     cursor: pointer;
     border: 3px solid #afeeba;
-    background-color: #647aed; }
+    background-color: #4CA8C7; }
     .recent-news__dropdown button img {
       width: 10px; }
     .recent-news__dropdown button:hover {
-      background-color: #6a64ed; }
+      background-color: #6c65ea; }
   .recent-news__dropdown .arrow-icon--aqa,
   .recent-news__dropdown .arrow-icon--ocr,
   .recent-news__dropdown .arrow-icon--edexcel {
@@ -313,20 +328,5 @@ html {
 
 .dropdown-content--active {
   display: block; }
-
-.loading-spinner {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 4px solid black;
-  border-top: 4px solid cornflowerblue;
-  animation: spin 1s linear infinite;
-  margin: 0 auto; }
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg); }
-  100% {
-    transform: rotate(360deg); } }
 
 /*# sourceMappingURL=styles.css.map */

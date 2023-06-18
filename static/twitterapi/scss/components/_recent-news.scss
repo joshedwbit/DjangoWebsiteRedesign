@@ -20,14 +20,15 @@
         margin-bottom: 10px;
         cursor: pointer;
         border: 3px solid adjust-hue($bg-secondary, $degrees: -50);
-        background-color: adjust-hue($bg-primary, $degrees: 12);
+        background-color: $pacific-cyan;
+        // transition: background-color 0.3s;
 
         img {
             width: 10px;
         }
 
         &:hover {
-            background-color: adjust-hue($bg-primary, $degrees: 24);
+            background-color: $menu-primary;
         }
     }
 
@@ -64,18 +65,3 @@
     // possibly needs an important tag
     display: block;
 }
-
-.loading-spinner {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 4px solid black;
-    border-top: 4px solid $bg-primary;
-    animation: spin 1s linear infinite;
-    margin: 0 auto;
-  }
-
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
