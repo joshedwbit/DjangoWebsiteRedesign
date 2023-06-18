@@ -2,15 +2,39 @@
 {% load sass_tags %}
 {% load static %}
 
-{% block scripts %}
-<script type="text/javascript" src="{% sass_src 'twitterapi/javascript/api-dropdown.js' %}"></script>
-{% endblock %}
-
 {% block content %}
 <div class="pageTitle">Recent news</div>
 <div class="recent-news__container">
-    <a class="twitter-timeline" href="https://twitter.com/PearsonEdexcel?ref_src=twsrc%5Etfw">Tweets by PearsonEdexcel</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    <a class="twitter-timeline" href="https://twitter.com/OCR_Maths?ref_src=twsrc%5Etfw">Tweets by OCR_Maths</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    <a class="twitter-timeline" href="https://twitter.com/AQAMaths?ref_src=twsrc%5Etfw">Tweets by AQAMaths</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <div class="recent-news__dropdown">
+        <button class="recent-news__dropdown-edexcel br">
+            Edexcel
+            <img class="arrow-icon--edexcel" src="{% static 'images/svg/arrow-down.svg' %}" alt="arrow-down">
+        </button>
+        <div class="recent-news__wrapper-edexcel">
+            <a class="twitter-timeline" data-height="600" data-theme="dark" href="https://twitter.com/PearsonEdexcel?ref_src=twsrc%5Etfw">Loading tweets...<div class="loading-spinner"></div></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+    </div>
+    <div class="recent-news__dropdown">
+        <button class="recent-news__dropdown-ocr br">
+            OCR
+            <img class="arrow-icon--ocr" src="{% static 'images/svg/arrow-down.svg' %}" alt="arrow-down">
+        </button>
+        <div class="recent-news__wrapper-ocr">
+            <a class="twitter-timeline" data-height="600" data-theme="dark" href="https://twitter.com/OCR_Maths?ref_src=twsrc%5Etfw">Loading tweets...<div class="loading-spinner"></div></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+    </div>
+    <div class="recent-news__dropdown">
+        <button class="recent-news__dropdown-aqa br">
+            AQA
+            <img class="arrow-icon--aqa" src="{% static 'images/svg/arrow-down.svg' %}" alt="arrow-down">
+        </button>
+        <div class="recent-news__wrapper-aqa">
+            <a class="twitter-timeline" data-height="600" data-theme="dark" href="https://twitter.com/AQAMaths?ref_src=twsrc%5Etfw">Loading tweets...<div class="loading-spinner"></div></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+    </div>
 </div>
+{% endblock %}
+
+{% block footerScripts %}
+<script type="text/javascript" src="{% sass_src 'twitterapi/javascript/api-dropdown.js' %}"></script>
 {% endblock %}

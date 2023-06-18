@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{% sass_src 'scss/styles.scss' %}">
         <script type="text/javascript" src="{% sass_src 'javascript/d2-script.js' %}"></script>
-        {% block scripts %}
+        {% block headerScripts %}
         {% endblock %}
     </head>
     <body class="background">
@@ -55,13 +55,19 @@
                     </div>
                     <div class="footer__rhs">
                         <div class="footer__rhs__container">
-                            <img class="footer__rhs__icon--email" src="{% static 'images/svg/footer/mail.svg' %}" alt="email">
-                            <img class="footer__rhs__icon--whatsapp" src="{% static 'images/svg/footer/whatsapp.svg' %}" alt="email">
+                            <a href="mailto:joshuajamesedwards1@gmail.com">
+                                <img class="footer__rhs__icon--email" src="{% static 'images/svg/footer/mail.svg' %}" alt="email">
+                            </a>
+                            <a href="tel:+447808226490">
+                                <img class="footer__rhs__icon--whatsapp" src="{% static 'images/svg/footer/whatsapp.svg' %}" alt="email">
+                            </a>
                         </div>
                     </div>
                 </div>
             </footer>
             {% endblock %}
         </div>
+        {% block footerScripts %}
+        {% endblock %}
     </body>
 </html>
