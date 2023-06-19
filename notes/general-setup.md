@@ -115,3 +115,6 @@ update styles.scss to pull in new styles (if necessary)
 8.
 If adding specific stylesheet/js to a view file, must include {% load sass_tags %}
 at the top of the file
+
+9.
+create package.json = provides info about project, dependencies and scripts = crucial for managing and building project.
