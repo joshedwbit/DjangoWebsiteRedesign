@@ -7,4 +7,8 @@ from .forms import MyForm
 class LeaveAReviewView(View):
     def get(self, request):
         cache.clear()
-        return render(request, 'reviews/leaveareview.html')
+        form = MyForm()
+        return render(request, 'reviews/leaveareview.html',
+        {
+            'form': form
+        })
