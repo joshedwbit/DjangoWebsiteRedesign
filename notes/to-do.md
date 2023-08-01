@@ -1,5 +1,6 @@
 
 # steps
+finish last two pages with models correctly setup and mvc
 breakup stylesheets correctly (use SASS)
 responsive
 Favicon
