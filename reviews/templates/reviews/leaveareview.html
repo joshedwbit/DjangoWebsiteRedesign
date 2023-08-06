@@ -9,9 +9,12 @@
 {% block content %}
 <div class="pageTitle">Leave a Review</div>
 
+{{introText.intro_text|safe}}
+
+
 <form method="post">
     {% csrf_token %}
-    {{ form.as_p }}
+    {{ form.as_div }}
     <input type="submit" value="Submit">
 </form>
 

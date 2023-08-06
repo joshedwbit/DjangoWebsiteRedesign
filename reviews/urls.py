@@ -1,7 +1,7 @@
 from django.urls import path
 from . import views
-from .views import LeaveAReviewView
+from .views import leaveAReviewView
 
 urlpatterns = [
-    path('', LeaveAReviewView.as_view(), name='leave-a-review'),
+    path('', leaveAReviewView.as_view(), name='leave-a-review'),
 ]

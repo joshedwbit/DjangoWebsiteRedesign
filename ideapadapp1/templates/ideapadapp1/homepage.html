@@ -8,20 +8,19 @@
 
 {% block content %}
     <div class="homepage">
-        {% for model in homepage_model %}
-        <h2 class="homepage__title">{{ model.Title }}</h2>
+        <h2 class="homepage__title">{{ homepage_model.Title }}</h2>
         <section class="homepage__header__about-me">
             <div>
                 <h3 class="homepage__header__title">About me</h3>
                 <div>
-                    {{ model.AboutMe|safe }}
+                    {{ homepage_model.AboutMe|safe }}
                 </div>
             </div>
         </section>
         <section class="homepage__header__aim">
             <h3 class="homepage__header__title">Aim</h3>
             <div>
-                {{ model.Aim|safe }}
+                {{ homepage_model.Aim|safe }}
             </div>
         </section>
         <section class="homepage__body__biopic">
@@ -30,15 +29,14 @@
         <section class="homepage__body__background">
             <h3 class="homepage__body__title">Background</h3>
             <div>
-                {{ model.Background|safe }}
+                {{ homepage_model.Background|safe }}
             </div>
         </section>
         <section class="homepage__body__approach">
             <h3 class="homepage__body__title">Approach</h3>
             <div>
-                {{ model.Approach|safe }}<br>If interested please <a href="{% url 'about' %}" >get in contact.</a>
+                {{ homepage_model.Approach|safe }}<br>If interested please <a href="{% url 'about' %}" >get in contact.</a>
             </div>
         </section>
-        {% endfor %}
     </div>
 {% endblock %}

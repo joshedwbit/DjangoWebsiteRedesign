@@ -11,7 +11,7 @@ class HomeView(View):
         cache.clear()
         now = datetime.now()
         current_year = now.year
-        homepage_model = homepage.objects.all()
+        homepage_model = homepage.objects.first()
         return render(request, 'ideapadapp1/homepage.html', {'homepage_model': homepage_model, 'current_year': current_year})
 
 class AboutView(View):
