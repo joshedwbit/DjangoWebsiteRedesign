@@ -2,14 +2,14 @@ from django import forms
 from django.core.validators import RegexValidator
 # from django.core.validators import MinLengthValidator
 # from django.core.validators import RegexValidator
-from .models import leaveAReview
+from .models import reviews
 
 class leaveAReviewForm(forms.ModelForm):
 
     alpha_only = RegexValidator(r'^[a-zA-Z]*$', 'Only alphabetic characters are allowed.')
 
     class Meta:
-        model = leaveAReview
+        model = reviews
         # fields = '__all__'
         exclude = ['id', 'timestamp']
         # can specify only fields to use on the FE here

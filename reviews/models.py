@@ -1,6 +1,8 @@
 from django.db import models
 
-class leaveAReview(models.Model):
+class reviews(models.Model):
+    class Meta:
+        verbose_name_plural = "Reviews"
     id = models.AutoField(primary_key=True)
     first_name = models.CharField(max_length=100, blank=True)
     school_name = models.CharField(max_length=100, blank=True)
@@ -14,4 +16,6 @@ class leaveAReview(models.Model):
     # Add other fields as needed
 
 class leaveAReviewText(models.Model):
+    class Meta:
+        verbose_name_plural = "Leave a review intro text"
     intro_text = models.TextField(max_length=800)
