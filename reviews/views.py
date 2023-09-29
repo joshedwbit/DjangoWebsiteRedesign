@@ -9,7 +9,7 @@ class leaveAReviewView(View):
         cache.clear()
 
         form = leaveAReviewForm()
-        leaveAReviewText_model = leaveAReviewText.objects.first()
+        leaveAReviewText_model = leaveAReviewText.objects
         return render(request, 'reviews/leaveareview.html',
         {
             'form': form,
