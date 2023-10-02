@@ -118,3 +118,7 @@ at the top of the file
 
 9.
 create package.json = provides info about project, dependencies and scripts = crucial for managing and building project.
+
+
+10.
+Git learning
