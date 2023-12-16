@@ -11,13 +11,13 @@
 
 {{introText.intro_text|safe}}
 
-
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_div }}
-    <input type="submit" value="Post">
-</form>
-
+<section class="review-form--container">
+    <form method="post" class="review-form">
+        {% csrf_token %}
+        {{ form.as_div }}
+        <input type="submit" value="Post">
+    </form>
+<section>
 {% endblock %}
 
 
